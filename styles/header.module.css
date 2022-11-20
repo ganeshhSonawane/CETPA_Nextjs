@@ -1,0 +1,27 @@
+.nav_list {
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.nav_link {
+  display: flex;
+  align-items: center;
+}
+
+.nav_link a {
+  color: #000;
+  text-decoration: none;
+  padding: 1rem 2.5rem;
+  border-radius: 3px;
+}
+.nav_link a:hover {
+  background-color: #000;
+  color: #fff !important;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

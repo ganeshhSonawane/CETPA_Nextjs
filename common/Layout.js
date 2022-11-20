@@ -1,19 +1,29 @@
-import React from 'react'
-import Footer from './Footer'
-import Header from './Header'
-import Navbar from './Navbar'
+import React from "react";
+import Footer from "./Footer";
+import Header from "./header";
 
-const Layout = ({children}) => {
-  return (
-    <>
-        <div className='container'>
-            <Header/>
-            <Navbar />
-            {children}
-            <Footer/>
-        </div>
-    </>
-  )
+const Layout = (props) => {
+    const {children, footerstatus} = props;
+    console.log('footerstatus', footerstatus);
+    return(
+        <>
+        {true ? (<>
+                    <Header/>
+                    <div className="container">
+                        {children}
+                    </div>
+                    {!footerstatus && (<Footer/>)}
+            </>) : (
+                <div className="container">
+                    <Header/>
+                    {children}
+                    {!footerstatus && (<Footer/>)}
+                </div>
+            )
+        }
+            
+       </>
+    )
 }
 
-export default Layout
+export default Layout;

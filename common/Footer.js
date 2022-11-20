@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const Footer = () => {
-  return (
-    <div className='row bg-info bg-opacity-50'>
-        <h3>Copyright</h3>
-    </div>
-  )
+    return(
+        <div className="row bg-dark">
+            <div className="col-sm-12 p-4">
+                <h2 className="text-white">Footer</h2>
+            </div>
+        </div>
+    )
 }
 
-export default Footer
+export default Footer;
