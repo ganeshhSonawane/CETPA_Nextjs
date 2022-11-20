@@ -32,3 +32,111 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////
+php/python/java/golang/ror/.NET
+javascript
+nodejs-2009
+
+js engine - chrome(v8), firefox(spidermonkey)
+nodejs - js engine (v8) + libraries + native code (C++)
+
+
+back end and front end 
+
+tight coupling
+
+
+react
+vue
+angular
+backbone
+express
+blaze
+
+
+
+typescript
+gojs
+jquery
+electronjs
+d3js
+
+flutter
+underscore js
+anime.js
+
+
+----------------------------------
+typescript - js + type defintions
+jquery - modified code of js
+----------------------------------
+
+AngularJS - Framework
+React - Library
+Vuejs - library
+backbone
+meteor
+
+
+
+Expressjs - framework
+Koa - framwork
+NestJS - MVC
+SailsJS - MVC
+
+
+
+NextJS - Frework for React
+NuxtJS - framework for vue
+Blitzjs - Framework on NextJS
+
+
+
+
+wedding packages - fooding, decoration, venue, rooms
+Angular - routing/data storage/data transfer/dom
+
+
+catering/decoration/camera/light
+React - react-router/react-dom/redux/
+
+
+budget
+customizations
+not required features
+
+easy to learn/react developers
+
+
+
+
+React vs NextJS
+heavy data transafer/ static websites
+end user portal/ non-end user portal
+
+
+
+
+//-----------------------------------
+browserrouter
+
+
+
+school
+
+home
+about
+facilities
+contact
+courses
+
+
+
+
+npx create-next-app@latest
