@@ -4,7 +4,7 @@ import style from "../styles/header.module.css";
 
 const Navbar = () => {
   return (
-    <div className="col-7">
+    <div className="col-8">
       <div className="row bg-info bg-opacity-50">
         <nav className="navbar navbar-expand-lg bg-light">
           <div className="container-fluid">
@@ -40,6 +40,9 @@ const Navbar = () => {
                 </li>
                 <li className={[style.nav_link, "nav-item"].join(" ")}>
                   <Link href="/product">Products</Link>
+                </li>
+                <li className={[style.nav_link, "nav-item"].join(" ")}>
+                  <Link href="/productssr">Product-SSR</Link>
                 </li>
                 <li className={[style.nav_link, "nav-item"].join(" ")}>
                   <Link href="/contact">Contact</Link>
