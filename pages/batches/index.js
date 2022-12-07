@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import style from "../styles/product.module.css";
+import style from "../../styles/product.module.css";
 
 //ssg - build
 export const getStaticProps = async () => {
@@ -12,7 +12,7 @@ export const getStaticProps = async () => {
   };
 };
 
-const Product = (props) => {
+const Batches = (props) => {
   const { productData } = props;
   return (
     <div className="row">
@@ -30,9 +30,10 @@ const Product = (props) => {
                 height={200}
                 alt={item.title}
               ></Image>
-              <Link href={`/product/${item.id}`} className={style.product_title}>{item.title}</Link>
+              <Link href={`/batches/${item.id}`} className={style.product_title}>{item.title}</Link>
               <p className={style.product_desc}>{item.description}</p>
               <p className={style.product_price}>{"Rs." + item.price}</p>
+              
             </div>
           </li>
         ))}
@@ -41,4 +42,4 @@ const Product = (props) => {
   );
 };
 
-export default Product;
+export default Batches;

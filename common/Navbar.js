@@ -42,7 +42,7 @@ const Navbar = () => {
                   <Link href="/product">Products</Link>
                 </li>
                 <li className={[style.nav_link, "nav-item"].join(" ")}>
-                  <Link href="/productssr">Product-SSR</Link>
+                  <Link href="/batches">Batches</Link>
                 </li>
                 <li className={[style.nav_link, "nav-item"].join(" ")}>
                   <Link href="/contact">Contact</Link>

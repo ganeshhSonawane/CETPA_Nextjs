@@ -2,14 +2,15 @@ import React from "react";
 import Logo from "./Logo";
 import Searchbar from "./Searchbar";
 import Navbar from "./Navbar";
+import Loginmenu from "./Head3";
 
 const Header = () => {
   return (
-      <div className="row bg-light">
-        <Logo />
-        <Navbar />
-        <Searchbar />
-      </div>
+    <div className="row bg-light d-flex justify-content-center align-items-center">
+      <Logo />
+      <Navbar />
+      <Loginmenu />
+    </div>
   );
 };
 
