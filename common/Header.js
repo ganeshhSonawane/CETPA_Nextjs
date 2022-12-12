@@ -6,10 +6,10 @@ import Loginmenu from "./Head3";
 
 const Header = () => {
   return (
-    <div className="row bg-light d-flex justify-content-center align-items-center">
-      <Logo />
-      <Navbar />
-      <Loginmenu />
+      <div className="row bg-light d-flex justify-content-center align-items-center header">
+        <Logo />
+        <Navbar />
+        <Loginmenu />
     </div>
   );
 };
