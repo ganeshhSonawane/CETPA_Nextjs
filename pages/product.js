@@ -15,7 +15,7 @@ export const getStaticProps = async () => {
 const Product = (props) => {
   const router = useRouter();
   useEffect(() => {
-    let loginStatus = localStorage.getItem("loginStatus");
+    let loginStatus = localStorage.getItem("loginstatus");
     if (!loginStatus) {
       router.push("/login");
     }

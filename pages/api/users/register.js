@@ -3,7 +3,6 @@ import connectDB from "../../../middleware/mongoose";
 
 const handler = async (req, res) => {
   if (req.method == "POST") {
-    //console.log(req.body);
     try {
       let temp = new Users({
         userid: parseInt(Math.random() * 10).toString(),

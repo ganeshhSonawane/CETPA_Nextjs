@@ -3,10 +3,8 @@ import connectDB from "../../../middleware/mongoose";
 
 const handler = async (req, res) => {
   if (req.method == "POST") {
-    //console.log(req.body);
     try {
       let data = await Users.findOne({ email: req.body.email });
-      console.log("data", data);
       if (Object.keys(data).length !== 0) {
         if (data.password === req.body.password) {
           res.status(200).json(data);
