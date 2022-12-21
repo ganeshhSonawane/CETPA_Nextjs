@@ -5,7 +5,6 @@ import style from "../../styles/product.module.css";
 //SSG
 
 export const getStaticPaths = async () => {
-  // const arr = ["2022", "2021", "2020", "2019", "2018"];
   const response = await fetch(process.env.API_URL);
   const arr = await response.json();
   const paths = arr.map((item) => {

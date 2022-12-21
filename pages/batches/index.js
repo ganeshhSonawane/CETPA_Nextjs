@@ -5,7 +5,7 @@ import style from "../../styles/product.module.css";
 
 //ssg - build
 export const getStaticProps = async () => {
-  const response = await fetch("https://fakestoreapi.com/products");
+  const response = await fetch(process.env.API_URL);
   const data = await response.json(); //To convert stringify json to parsed json
   return {
     props: { productData: data },
