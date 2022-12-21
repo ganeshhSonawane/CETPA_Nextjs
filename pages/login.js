@@ -3,17 +3,28 @@ import Link from "next/link";
 import axios from "axios";
 import { useRouter } from "next/router";
 
-const Login = () => {
+export const getStaticProps = () => {
+  let url = process.env.BASE_URL;
+  return {
+    props: {
+      baseurl: url,
+    },
+  };
+};
+const Login = (props) => {
   const [formdata, setFormdata] = useState({});
   const [submitstatus, setsubmitstatus] = useState(false);
   const router = useRouter();
-
+  const { baseurl } = props;
   const loginFn = async () => {
-    const url = "http://localhost:3000/api/users/login";
+    const url = baseurl + "api/users/login";
     try {
       const response = await axios.post(url, formdata);
       console.log(response.data);
       if (response.data.userid) {
+        localStorage.setItem("loginstatus", true);
+        localStorage.setItem("username", response.data.email);
+        localStorage.setItem("name", response.data.name);
         router.push("/");
       }
     } catch {

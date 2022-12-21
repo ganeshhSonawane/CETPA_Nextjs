@@ -6,7 +6,7 @@ export default function document() {
       <Head>
         <meta name="author" content="nextjs" />
       </Head>
-      <body className="bg-success bg-opacity-100">
+      <body>
         <Main />
         <NextScript />
       </body>

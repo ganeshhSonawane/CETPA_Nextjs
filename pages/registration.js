@@ -3,10 +3,20 @@ import Link from "next/link";
 import axios from "axios";
 import { useRouter } from "next/router";
 
-const Registration = () => {
+export const getStaticProps = () => {
+  let url = process.env.BASE_URL;
+  return {
+    props: {
+      baseurl: url,
+    },
+  };
+};
+
+const Registration = (props) => {
   const [formdata, setFormdata] = useState({});
   const [submitstatus, setsubmitstatus] = useState(false);
   const router = useRouter();
+  const { baseurl } = props;
   const resetObj = {
     name: "",
     email: "",
@@ -14,7 +24,7 @@ const Registration = () => {
     password: "",
   };
   const registerFn = async () => {
-    const url = "http://localhost:3000/api/users/register";
+    const url = baseurl + "api/users/register";
     const response = await axios.post(url, formdata);
     console.log(response.data);
     if (response.status === 201) {
@@ -23,6 +33,9 @@ const Registration = () => {
       router.push("/login");
     }
   };
+
+  const validate = () => {};
+
   const handleChange = (e) => {
     console.log(e.target.name, e.target.value);
     let tempObj = {};

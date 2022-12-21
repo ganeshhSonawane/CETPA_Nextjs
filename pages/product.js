@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import style from "../styles/product.module.css";
-
+import { useRouter } from "next/router";
 //ssg - build
 export const getStaticProps = async () => {
   const response = await fetch(process.env.API_URL);
@@ -13,6 +13,13 @@ export const getStaticProps = async () => {
 };
 
 const Product = (props) => {
+  const router = useRouter();
+  useEffect(() => {
+    let loginStatus = localStorage.getItem("loginStatus");
+    if (!loginStatus) {
+      router.push("/login");
+    }
+  });
   const { productData } = props;
   return (
     <div className="row">
@@ -30,7 +37,12 @@ const Product = (props) => {
                 height={200}
                 alt={item.title}
               ></Image>
-              <Link href={`/product/${item.id}`} className={style.product_title}>{item.title}</Link>
+              <Link
+                href={`/product/${item.id}`}
+                className={style.product_title}
+              >
+                {item.title}
+              </Link>
               <p className={style.product_desc}>{item.description}</p>
               <p className={style.product_price}>{"Rs." + item.price}</p>
             </div>
