@@ -4,7 +4,6 @@ import Header from "./Header";
 
 const Layout = (props) => {
     const {children, footerstatus} = props;
-    console.log('footerstatus', footerstatus);
     return(
         <>
         {true ? (<>

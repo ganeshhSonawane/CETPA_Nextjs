@@ -6,7 +6,6 @@ import style from '../../styles/product.module.css';
 
 export const getServerSideProps = async (context) => {
     const id = context.params.id;
-    console.log('id' - id);
     const response = await fetch(process.env.API_URL + id);
     const data = await response.json(); //To convert stringify json to parsed json
     return {
